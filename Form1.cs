@@ -202,6 +202,9 @@ namespace WindowsFormsListe
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
+            TxtID.Clear();
+            TxtName.Clear();
+            TxtPrenom.Clear();
             if (Inup)
             {
                 Cbx.Enabled = true;
