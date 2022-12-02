@@ -130,7 +130,7 @@ namespace WindowsFormsListe
             string YNBox = "Confirm Deletion";
 
 
-            if (MessageBox.Show(msgbox, YNBox, MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show(msgbox, YNBox, MessageBoxButtons.YesNo) == DialogResult.Yes)
 
             {
                 if (cmd.Connection.State == ConnectionState.Open)
@@ -139,7 +139,7 @@ namespace WindowsFormsListe
                 }
                 cnx.Open();
                 cmd.Connection = cnx;
-                cmd.CommandText = "delete from List where id='" + TxtID.Text + "' ";
+                cmd.CommandText = "delete from List where ID='" + TxtID.Text + "' ";
                 cmd.ExecuteNonQuery();
                 cnx.Close();
                 TxtID.Clear();
